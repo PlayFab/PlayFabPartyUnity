@@ -12,16 +12,16 @@ This is a PlayFab Party plugin for game development on Unity.
 ## Version
 |Party Unity SDK (main)
 |-|
-|1.4.8.0-main.0
+|1.5.0.1-main.0
 
 Officially supported versions of PlayFab Party binaries with this release, by platform:
 
 Platform|Version
 |-|-|
-Windows|1.4.8
-Game Core|1.4.8
-iOS|1.4.8
-Android|1.4.8
+Windows|1.5.0
+Game Core|1.5.* (GDK)
+iOS|1.5.0
+Android|1.5.0
 
 ## Prerequisites
 - PlayFab account ([www.playfab.com](https://www.playfab.com)) registered and set up:
@@ -80,6 +80,9 @@ The SDK contains the following:
     - Go to `/Assets/PlayFabPartySDK/Setup/GameCore` folder in File Explorer and run `install-party-game-core-libs.ps1` script, it will copy Party binaries installed with GDK to `PlayFabPartySDK` assets
 - Go to the `/Assets/PlayFabPartySDK/Prefabs` folder and drag and drop the `PlayFabMultiplayerManager` prefab into your scene
 - Note: Party SDK is x64, so when you build Standalone (Windows) please build for x64.
+- If you are targeting iOS:
+    - Enable 'Prepare iOS for Recording' (set checkbox) in iOS Player Settings
+    - Two PlayFabParty.framework libraries are provided: one for real iOS devices and another one for iOS Simulator (x64). Make sure to enable only one of them for iOS platform before building. The framework for a device is enabled by default (see Inspector settings for PlayFabParty.framework folders)
 - If you are targeting Android: please make sure to allow your app to use microphone on the device.
 
 For a detailed guide please check out [Quickstart: PlayFab Party Unity Plugin](https://docs.microsoft.com/en-us/gaming/playfab/features/multiplayer/networking/party-unity-plugin-quickstart)
