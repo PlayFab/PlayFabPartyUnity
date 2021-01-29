@@ -14,7 +14,7 @@ _(Please use Git client with Large File Storage (LFS) support to work with this 
 ## Version
 |Party Unity SDK (main)
 |-|
-|1.5.0.2-main.0
+|1.5.0.3-main.0
 
 Officially supported versions of PlayFab Party binaries with this release, by platform:
 
@@ -30,7 +30,7 @@ Android|1.5.0
     - Studio and App configured, TitleID exists
     - Party feature enabled
     - Highly recommended: PlayFab Unity test app tried to ensure seamless PlayFab integration
-- PlayFab Unity Editor Extensions plugin
+- PlayFab Unity Editor Extensions plugin (recommended)
 - PlayFab (Core) SDK (installed via PlayFab Unity Editor extensions)
 - If you are targeting iOS:
     - Unity iOS Build Support Add-on installed
@@ -123,3 +123,15 @@ When this file is detected by the application in runtime it will use it to enabl
 3. `ERROR` - only errors
 
 The logging is disabled by default, but can be enabled with "enabled" property set to `true`.
+
+## Troubleshooting
+###Expired Tokens:
+PlayFab party unity plugin uses the entity token of the logged-in user to access PlayFab services such as creating a network, speech-to-text and text-to-speech.
+However this Entity token has a finite expiration time typically 24 hrs after which the Party Unity plugin might experience issues accessing these services.
+
+One symptom of the expired token is that the player is unable to create a new party network.
+
+The game is responsible for monitoring the expiration of the entity token and provide an updated token to the Party Unity plugin using the following API available in PlayFabMultiplayerManager:
+```json
+public void UpdateEntityToken(string entityToken)
+```
