@@ -117,7 +117,7 @@ The underlying Party C++ library includes logging capabilities with a configurab
 }
 ```
 
-When this file is detected by the application in runtime it will use it to enable logging as configured. The path to log files on a Stadia instance is specified by "logFolder" property. The following verbosity levels are currently supported:
+When this file is detected by the application in runtime it will use it to enable logging as configured. The path to log files is specified by "logFolder" property. The following verbosity levels are currently supported:
 1. `VERBOSE` - everything
 2. `INFO` - less than everything, only important messages and errors
 3. `ERROR` - only errors
