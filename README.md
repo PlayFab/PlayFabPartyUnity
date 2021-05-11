@@ -14,16 +14,16 @@ _(Please use Git client with Large File Storage (LFS) support to work with this 
 ## Version
 |Party Unity SDK (main)
 |-|
-|1.5.0.3-main.0
+|1.6.0.0-main.0
 
 Officially supported versions of PlayFab Party binaries with this release, by platform:
 
-Platform|Version
-|-|-|
-Windows|1.5.0
-Game Core|1.5.* (distributed with Microsoft GDK)
-iOS|1.5.0
-Android|1.5.0
+Platform|Version|Notes
+|-|-|-|
+Windows|1.6.0
+Game Core|1.6.* (distributed with Microsoft GDK)|Compatible with GDK 2021.04 (10.0.19041.6078) April 2021
+iOS|1.6.0
+Android|1.6.0
 
 ## Prerequisites
 - PlayFab account ([www.playfab.com](https://www.playfab.com)) registered and set up:
@@ -43,14 +43,14 @@ Android|1.5.0
 - If you are targeting Game Core platform (consoles and/or PC):
     - Have access to the [Microsoft Game Development Kit (GDK)](http://aka.ms/gdkdl)
     - GDK installed (with all optional components)
-    - GDK Unity plugin installed (available in Add-ins download section on GDK portal)
+    - Party on Game Core platform requires Xbox Live authentication, and therefore make sure that:
+        - Your Xbox app title is registered in Xbox Partner Center
+        - Necessary SandboxID and developer Xbox Live account are created, and configured to work with the registered Xbox app title
     - If you are targeting Game Core on Xbox consoles:
         - Unity Game Core Add-on for a necessary console installed (download from Unity)
-        - Party on Xbox consoles requires Xbox Live authentication, and therefore make sure that:
-            - Your Xbox app title is registered in Xbox Partner Center
-            - Necessary SandboxID and developer Xbox Live account are created, and configured to work with the registered Xbox app title
+        - Unity Game Core Package compatible with this version of GDK installed (download from Unity, then install using Package Manager in Unity Editor)
     - If you are targeting Game Core PC:
-        - Party Unity SDK is "Game Core PC ready", as soon as Unity build tools for Game Core PC are available
+        - [GDK Unity plugin package](https://github.com/microsoft/gdk-unity-package) for this version of GDK installed
 
 ## What's inside
 The SDK contains the following:
@@ -72,10 +72,13 @@ The SDK contains the following:
 - Install latest version of PlayFabSDK plugin using PlayFab Unity Editor Extensions UI
 - Log in to your PlayFab title using PlayFab Unity Editor Extensions UI
 - Follow [README guidelines from PlayFabSDK](https://github.com/PlayFab/UnitySDK) to test basic PlayFab functionality
-- If you are targeting Game Core:
-    - Install GDK Unity plugin
-    - If you are targeting Game Core on Xbox consoles:
-        - In Unity Project tree navigate to `Assets/XGamingRuntime` folder and enable all platforms in Inspector panel for `XGamingRuntime.dll` and `XGamingRuntimeThunks.dll` files
+- If you are targeting Game Core on:
+    - Xbox consoles:
+        - Add macro definition (Scripting Define Symbol) `UNITY_GAME_CORE` in Project Settings
+    - PC:
+        - Add macro definition (Scripting Define Symbol) `MICROSOFT_GAME_CORE` in Project Settings
+        - To build for Game Core on PC use top menu command in Unity Editor: GDK > PC > Build and Run
+    - Note that these macros should not be set at the same time, they are mutually exclusive.
 - Create a new, empty scene
 - Import PlayFab Party Unity SDK plugin (unity package)
 - If you are targeting Game Core: 
@@ -117,7 +120,7 @@ The underlying Party C++ library includes logging capabilities with a configurab
 }
 ```
 
-When this file is detected by the application in runtime it will use it to enable logging as configured. The path to log files is specified by "logFolder" property. The following verbosity levels are currently supported:
+When this file is detected by the application in runtime it will use it to enable logging as configured. The path to log files on a Stadia instance is specified by "logFolder" property. The following verbosity levels are currently supported:
 1. `VERBOSE` - everything
 2. `INFO` - less than everything, only important messages and errors
 3. `ERROR` - only errors
