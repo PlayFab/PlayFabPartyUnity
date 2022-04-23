@@ -14,14 +14,14 @@ _(Please use Git client with Large File Storage (LFS) support to work with this 
 ## Version
 |Party Unity SDK (main)
 |-|
-|1.7.0.0-main.0
+|1.7.0.1-main.0
 
 Officially supported versions of PlayFab Party binaries with this release, by platform:
 
 Platform|Version|Notes
 |-|-|-|
 Windows|1.7.0
-Game Core|1.6.* (distributed with Microsoft GDK)|Compatible with GDK 2021.04 (10.0.19041.6078) April 2021
+Game Core|1.7.* (distributed with Microsoft GDK)|Compatible with GDK 2021.04 or later
 iOS|1.7.0
 Android|1.7.0
 
