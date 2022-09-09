@@ -8,6 +8,7 @@ _(Please use Git client with Large File Storage (LFS) support to work with this 
 ## Supported platforms:
 - Windows
 - Microsoft Game Core (just "Game Core" below)
+- Linux
 - iOS
 - Android
 
@@ -20,10 +21,11 @@ Officially supported versions of PlayFab Party binaries with this release, by pl
 
 Platform|Version|Notes
 |-|-|-|
-Windows|1.7.0
+Windows|1.7.11
 Game Core|1.7.* (distributed with Microsoft GDK)|Compatible with GDK 2021.04 or later
-iOS|1.7.0
-Android|1.7.0
+Linux|1.7.14 Tested with Ubuntu 20.04 and 22.04
+iOS|1.7.6
+Android|1.7.6
 
 ## Prerequisites
 - PlayFab account ([www.playfab.com](https://www.playfab.com)) registered and set up:
@@ -74,7 +76,7 @@ The SDK contains the following:
 - Follow [README guidelines from PlayFabSDK](https://github.com/PlayFab/UnitySDK) to test basic PlayFab functionality
 - If you are targeting Game Core on:
     - Xbox consoles:
-        - Add macro definition (Scripting Define Symbol) `UNITY_GAME_CORE` in Project Settings
+        - Add macro definition (Scripting Define Symbol) `UNITY_GAMECORE` in Project Settings
     - PC:
         - Add macro definition (Scripting Define Symbol) `MICROSOFT_GAME_CORE` in Project Settings
         - To build for Game Core on PC use top menu command in Unity Editor: GDK > PC > Build and Run
