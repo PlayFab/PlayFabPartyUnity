@@ -15,7 +15,7 @@ _(Please use Git client with Large File Storage (LFS) support to work with this 
 ## Version
 |Party Unity SDK (main)
 |-|
-|1.7.0.1-main.0
+|1.7.6.0-main.0
 
 Officially supported versions of PlayFab Party binaries with this release, by platform:
 
