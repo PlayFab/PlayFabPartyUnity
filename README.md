@@ -11,11 +11,12 @@ _(Please use Git client with Large File Storage (LFS) support to work with this 
 - Linux
 - iOS
 - Android
+- macOS
 
 ## Version
 |Party Unity SDK (main)
 |-|
-|1.7.0.1-main.0
+|1.7.6.0-main.0
 
 Officially supported versions of PlayFab Party binaries with this release, by platform:
 
@@ -26,6 +27,7 @@ Game Core|1.7.* (distributed with Microsoft GDK)|Compatible with GDK 2021.04 or 
 Linux|1.7.14 Tested with Ubuntu 20.04 and 22.04
 iOS|1.7.6
 Android|1.7.6
+macOS|1.7.16
 
 ## Prerequisites
 - PlayFab account ([www.playfab.com](https://www.playfab.com)) registered and set up:
@@ -122,12 +124,19 @@ The underlying Party C++ library includes logging capabilities with a configurab
 }
 ```
 
-When this file is detected by the application in runtime it will use it to enable logging as configured. The path to log files on a Stadia instance is specified by "logFolder" property. The following verbosity levels are currently supported:
+When this file is detected by the application in runtime it will use it to enable logging as configured. The following verbosity levels are currently supported:
 1. `VERBOSE` - everything
 2. `INFO` - less than everything, only important messages and errors
 3. `ERROR` - only errors
 
 The logging is disabled by default, but can be enabled with "enabled" property set to `true`.
+
+Instructions to enable logging for specific platform.
+Platform|Where to put PlayFabPartyLogger.json (permission needed)|`logFolder` value|How to view logs
+|-|-|-|-|
+iOS|Inside the application folder (Set UIFileSharingEnabled to true in the Info.plist of the app)|/app_sandbox_storage/Documents/|Copy logs from `logFolder` to PC
+Android|Create a folder "\sdcard\PlayFabParty\config" (External storage folder requires READ_EXTERNAL_STORAGE permission)|/sdcard/PlayFabParty/log/|Copy logs from `logFolder` to PC and open in NotePad++
+macOS|~/Documents (Set UIFileSharingEnabled to true in the Info.plist of the app)|~/Documents|Open logs directly in `logFolder`
 
 ## Troubleshooting
 ###Expired Tokens:
