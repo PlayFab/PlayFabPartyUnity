@@ -137,7 +137,7 @@ Platform|Where to put PlayFabPartyLogger.json (permission needed)|`logFolder` va
 iOS|Inside the application folder (Set UIFileSharingEnabled to true in the Info.plist of the app)|/app_sandbox_storage/Documents/|Copy logs from `logFolder` to PC
 Android|Create a folder "\sdcard\PlayFabParty\config" (External storage folder requires READ_EXTERNAL_STORAGE permission)|/sdcard/PlayFabParty/log/|Copy logs from `logFolder` to PC and open in NotePad++
 macOS|~/Documents (Set UIFileSharingEnabled to true in the Info.plist of the app)|~/Documents|Open logs directly in `logFolder`
-
+Linux|Create a folder "/home/{user}/PlayFabParty/" where {user} is the current user logged in | /home/{user}/PlayFabParty/log/ | go to the /home/{user}/PlayFabParty/log/ and open directly
 ## Troubleshooting
 ###Expired Tokens:
 PlayFab party unity plugin uses the entity token of the logged-in user to access PlayFab services such as creating a network, speech-to-text and text-to-speech.
