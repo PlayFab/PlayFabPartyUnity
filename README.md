@@ -134,11 +134,16 @@ The logging is disabled by default, but can be enabled with "enabled" property s
 Instructions to enable logging for specific platform.
 Platform|Where to put PlayFabPartyLogger.json (permission needed)|`logFolder` value|How to view logs
 |-|-|-|-|
+Linux|Create a folder "/home/{user}/PlayFabParty/" where {user} is the current user logged in | /home/{user}/PlayFabParty/log/ | Navigate to the `/home/{user}/PlayFabParty/log/` directory and open logs directly
 iOS|Inside the application folder (Set UIFileSharingEnabled to true in the Info.plist of the app)|/app_sandbox_storage/Documents/|Copy logs from `logFolder` to PC
 Android|Create a folder "\sdcard\PlayFabParty\config" (External storage folder requires READ_EXTERNAL_STORAGE permission)|/sdcard/PlayFabParty/log/|Copy logs from `logFolder` to PC and open in NotePad++
 macOS|~/Documents (Set UIFileSharingEnabled to true in the Info.plist of the app)|~/Documents|Open logs directly in `logFolder`
-Linux|Create a folder "/home/{user}/PlayFabParty/" where {user} is the current user logged in | /home/{user}/PlayFabParty/log/ | Navigate to the `/home/{user}/PlayFabParty/log/` directory and open logs directly
 ## Troubleshooting
+
+### WSL Compatibility
+
+While WSL can be used as a build platform to create Party binaries, it is not supported as a runtime platform to use Party SDK and its features. A machine with a Linux OS is required to take advantage of all Party features.
+
 ### Expired Tokens:
 PlayFab party unity plugin uses the entity token of the logged-in user to access PlayFab services such as creating a network, speech-to-text and text-to-speech.
 However this Entity token has a finite expiration time typically 24 hrs after which the Party Unity plugin might experience issues accessing these services.
