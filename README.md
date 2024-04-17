@@ -108,7 +108,7 @@ https://www.nuget.org/packages/Microsoft.PlayFab.PlayFabParty.Cpp.Windows/
 It is located at the root of the NuGet package content.
 
 ## Logging
-The underlying Party C++ library includes logging capabilities with a configurable verbosity level. Logging instructions can be found in the [PlayFabParty readme](https://github.com/PlayFab/PlayFabParty#logging)
+The underlying Party C++ library includes logging capabilities with a configurable verbosity level. Logging instructions can be found in the [PlayFabParty ReadMe](https://github.com/PlayFab/PlayFabParty#logging)
 
 ## WSL Compatibility
 
