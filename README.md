@@ -16,18 +16,18 @@ _(Please use Git client with Large File Storage (LFS) support to work with this 
 ## Version
 |Party Unity SDK (main)
 |-|
-|1.10.5.0-main.0
+|1.10.17.0-main.0
 
 Officially supported versions of PlayFab Party binaries with this release, by platform:
 
 Platform|Version|Notes
 |-|-|-|
-Windows|1.10.5
-Game Core|1.10.5 (distributed with Microsoft GDK)|Compatible with GDK 2021.04 or later
-Linux|1.10.5 Tested with Ubuntu 20.04
-iOS|1.10.5
-macOS|1.10.5
-Android|1.10.5
+Windows|1.10.17
+Game Core|1.10.17 (distributed with Microsoft GDK)|Compatible with GDK 2021.04 or later
+Linux|1.10.17 Tested with Ubuntu 22.04 amd 24.04
+iOS|1.10.17
+macOS|1.10.17
+Android|1.10.17
 
 ## Prerequisites
 - PlayFab account ([www.playfab.com](https://www.playfab.com)) registered and set up:
