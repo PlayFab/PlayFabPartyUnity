@@ -24,7 +24,7 @@ Platform|Version|Notes
 |-|-|-|
 Windows|1.10.17
 Game Core|1.10.17 (distributed with Microsoft GDK)|Compatible with GDK 2021.04 or later
-Linux|1.10.17 Tested with Ubuntu 22.04 amd 24.04
+Linux|1.10.17 Tested with Ubuntu 22.04 and 24.04
 iOS|1.10.17
 macOS|1.10.17
 Android|1.10.17
